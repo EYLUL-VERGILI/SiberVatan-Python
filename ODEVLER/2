@@ -1,0 +1,101 @@
+1
+def emeklilik_yasi(yas):
+    emeklilik_yasi=65
+    if yas<emeklilik_yasi:
+        emeklilige_kalanyil=emeklilik_yasi-yas
+        print(f"emekliliginize{emeklilige_kalanyil}yil kaldi")
+    else:
+        print("emeklisiniz")
+yas=int(input("yasinizi giriniz"))
+emeklilik_yasi(yas)
+
+2
+sayi1 = int(input("sayi 1 :"))
+sayi2 =int(input("sayi 2 :"))
+print(sayi1 ,"ile",sayi2,"arasindaki asal sayilar:")
+def hello(sayi):
+    for sayi in range(sayi1,sayi2+1):
+        if sayi > 1:
+            for i in range(2,sayi):
+                if (sayi % i) == 0:
+                    break
+            else:
+                print(sayi)    
+hello(sayi1)
+
+3
+liste1=[1,2,3,5,6,53]
+liste2=[9,8,7,6,5,4,2]
+
+def en_buyuk(liste1):
+    return max(liste1)
+def en_kucuk(liste2):
+    return min(liste2)
+en_buyuk_sayi = en_buyuk(liste1)
+en_kucuk_sayi = en_kucuk(liste2)
+
+print(en_buyuk_sayi + en_kucuk_sayi)
+
+4
+liste = [90,59,53,70,40]
+
+def ilkson_esitmi(liste):
+    if len(liste) < 2:
+        return False
+    else:
+        return liste[0] == liste[-1]
+    
+print(ilkson_esitmi(liste))   
+
+5
+sayi = int(input("sayi giriniz"))
+
+def palindrom_(sayi):
+    sayi1= str(sayi)
+    ters_sayi = sayi1[::-1]
+    if sayi1 == ters_sayi:
+        return True
+    else:
+        return False
+if palindrom_(sayi):
+    print("sayi palindrom")
+else:
+    print("sayi palindrom degil")
+
+6
+liste1 = [7,6,8,9,3,4]
+liste2 = [12,13,14,15,16,17]
+
+def topla(liste1, liste2):
+    liste =[]
+    for num in liste1:
+        if num%2==0:
+            liste.append(num)
+    for num in liste2:
+        if num%2!=0:
+            liste.append(num)
+    return liste
+
+liste = topla(liste1,liste2)
+print(liste)         
+
+7
+import random
+def tahmin_oyuncu():
+    tahmin=int(input("1 ve 6 arasi sayi gir:"))
+    return tahmin
+def rusruleti():
+    hedef = random.randint(1,6)
+    print("sayi belirlenmiştir")
+    while True:
+        tahmin = tahmin_oyuncu()
+        if tahmin<1 or tahmin>6:
+            print("geçersiz sayi yeniden dene")
+            continue
+        elif tahmin==hedef:
+            print("kazandin")
+            break
+        else:
+            print("yanliş tahmin yeniden deneyiniz")
+
+rusruleti()
