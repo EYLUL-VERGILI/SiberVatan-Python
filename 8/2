@@ -1,0 +1,35 @@
+toplam = 5
+list=[]
+for i in range(toplam):
+    deger=int(input("yeni deger gir:"))
+    if deger%3==0:
+        list.insert(0,deger)
+    else:
+        list.append(deger)
+print("listenin son hali",list)
+
+class Kisi:
+    def __init__(self,isim,yas):
+        self.isim=isim
+        self.yas=yas 
+    def __str__(self):
+        return f"{self.isim },{self.yas}"
+k1 = Kisi(isim="EYLÜL",yas="15")
+print(k1)
+
+class Soru :
+    def __init__(self,s1,cevap):
+        self.s1=s1
+        self.cevap=cevap
+    def dogru_Mu(self,tahmin):
+        return self.cevap == tahmin
+s2 = Soru("baskent neresi:","ankara")
+s3 = Soru("en kalabalik sehir:","istanbul")
+s4 = Soru("en güzel sehir:","karabük")
+dogru_cevaplar = 0
+sorular =[s2,s3,s4]
+for i in sorular:
+    cevap=input(i.s1)
+    if i.dogru_Mu(cevap):
+        dogru_cevaplar+=1
+print(f"dogru cevap sayisi:{dogru_cevaplar}")
