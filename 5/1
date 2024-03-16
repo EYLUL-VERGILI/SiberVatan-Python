@@ -1,0 +1,102 @@
+def selamdunya():
+    print("hello world")
+
+selamdunya()
+
+def _hosgeldin_(name):
+    print("_hosgeldin_"+ name)
+
+_hosgeldin_('eylül')
+
+def hosgeldiniz(isim):
+    print("hosgeldiniz " + isim)
+isim = input("bir isim giriniz")
+
+hosgeldiniz(isim)
+
+def hosgeldiniz(isim):
+    print("hosgeldiniz " + isim)
+
+hosgeldiniz(input("isim giriniz"))
+
+def fonksiyon(sehir = "karabuk"):
+    print("en sevdigim sehir:" + sehir)
+
+fonksiyon("istanbul")
+fonksiyon()
+
+def sayi(x):
+    x= x+5
+    return x
+
+sonuc = sayi(10)
+print(sonuc)
+
+def fonksiyon(x, y):
+    return x+y
+sonuc = fonksiyon(1,6)
+print(sonuc)
+
+def fonk_tuple(*argv):
+    for arg in argv:
+        print(arg)
+
+fonk_tuple('selam','naber','nasilsin','iyidir')        
+
+
+def ciftsayi(n):
+    ciftsayi_list = []  
+    for i in range(0,n+1):
+        if i%2==0:
+            ciftsayi_list.append(i)
+    return ciftsayi_list
+
+limit= int(input("bir ust sinir giriniz"))
+print("cift sayilar",ciftsayi(limit))
+def toplam(sayi1,sayi2):
+    return sayi1+sayi2
+def cikarma(sayi1,sayi2):
+    return sayi1-sayi2
+def carpma(sayi1,sayi2):
+    return sayi1*sayi2
+def bolme(sayi1,sayi2):
+    if sayi2==0:
+        print("tanimsiz islem")
+        return 0
+    else:
+        return sayi1/sayi2
+def faktoriyel(sayi1):
+    if sayi1==0:
+        return 1
+    else:
+        return sayi1*faktoriyel(sayi1-1)
+
+devam_etsinMi=True
+while (devam_etsinMi):
+    print("-------------------*HOSGELDİNİZ*--------------------------")
+    print("toplama icin 1")
+    print("cikarma icin 2")
+    print("carpma icin 3")
+    print("bolme icin 4")
+    print("cikmak icin 5")
+    print("faktöriyel icin 6")
+    tercih_input =int(input("-HANGİ İSLEMİ TERCİH EDERSİNİZ?:"))
+    sayi1 = int(input("ilk sayiyi giriniz:"))
+    sayi2 = int(input("ikinci sayiyi giriniz:"))
+    sonuc=0
+    if tercih_input==1:
+        sonuc=toplam(sayi1,sayi2)
+    elif tercih_input==2:
+        sonuc=cikarma(sayi1,sayi2)
+    elif tercih_input==3:
+        sonuc=carpma(sayi1,sayi2)
+    elif tercih_input==4:
+        sonuc=bolme(sayi1,sayi2)  
+    elif tercih_input==5:
+        devam_etsinMi=False
+    elif tercih_input==6:
+        sonuc=faktoriyel(sayi1)
+    else:
+        print("Lutfen gecerli bir sayi giriniz")
+
+    print(sonuc)
