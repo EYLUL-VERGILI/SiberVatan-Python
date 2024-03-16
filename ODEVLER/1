@@ -1,0 +1,120 @@
+#1
+cumle = "  YAZİLİMİ SEVERİM "
+cumle = cumle.strip()
+cumle = cumle.lower()
+print(cumle)
+
+#2
+ornek = [1,2,3,4,2,6,5,2]
+print(ornek.count(2))
+ 
+#3
+kelime = ("üzüm")
+harf = ("ü")
+sonuc = kelime.count(harf)
+print(sonuc)
+
+#4
+str1 = ("ben")
+str2 = (" eylül")
+birleşim = str1 + str2
+print(birleşim)
+aranan = birleşim.find("eylül")
+print(aranan)
+
+#5
+cumle = ("15 yaşindayim")
+kelimeler = cumle.split()
+sira = sorted(kelimeler)
+kelime = sira
+print(kelime)
+
+#6
+str1 = ("hello")
+str2 = (" world")
+birleşim = str1 + str2
+birleşim_lower = birleşim.lower()
+print(birleşim_lower)
+
+#7
+str = ("Ben Fenerbahçeliyim")
+str_find = str.find("ben")
+print(str_find)
+str = str.replace("fener","ben")
+print(str)
+
+#8
+kelime = "bilgisayar"
+kelime_replace = kelime.replace("i","!")
+print(kelime_replace)
+
+#9
+kelime = "tarak"
+ters_kelime = kelime[::-1]
+print(ters_kelime)
+if kelime == ters_kelime:
+   print("Bu kelime palindromedir")
+
+#10
+cümle = "en sevdiğim ders kimya ve biyolojidir"
+kelimeler = cümle.split()
+enuzun_kelime = max(kelimeler, key=len)
+print(enuzun_kelime)
+
+
+#11
+liste = [2,4,6,8,10]
+orta = liste[len(liste)//2]
+print(orta)
+
+#12
+tuple = ("1","2","3","4","5")
+new_tuple = (tuple[2], tuple[4])
+print(new_tuple)
+
+#13
+kume = {"1","2","3","4","5","6","7"}
+kume.add("6")
+print(kume)
+kume.remove("6")
+print(kume)
+
+#14
+dict = {'anahtar1':'deger1','anahtar2':'deger2'}
+dict['anahtar3'] = 'deger3'
+print(dict)
+
+#15
+liste = [1,2,3,4,5,6,7,8,9]
+ortasi = len(liste)//2
+liste.insert(ortasi,9)
+print(liste)
+
+#16
+liste = [1,2,3,4,5]
+ortasi = len(liste)//2
+ortadaki = liste[ortasi]
+tuple_liste = (ortadaki)
+print(tuple_liste)
+
+#17
+set = {1,2,3,4,5}
+list = list(set)
+toplam = sum(list)
+print(toplam)
+
+#18
+dict = {'anahtar1':'deger1','anahtar2':'deger2'}
+karakter_sayisi = sum(len(deger) for deger in dict.values())
+print(karakter_sayisi)
+
+#19
+liste = [7,9,40,53,99]
+enbuyuk_sayi = max(liste)
+print(enbuyuk_sayi)
+
+#20
+dict = {'anahtar1':'deger1','anahtar2':'deger2'}
+birleşim = ' '.join(dict.values())
+print(birleşim)
+
