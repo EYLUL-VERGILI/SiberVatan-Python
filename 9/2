@@ -1,0 +1,17 @@
+import os
+gecerli_dizin=os.getcwd()
+print(gecerli_dizin)
+for i in os.listdir(gecerli_dizin):
+    print(i)
+new_directory=os.path.join(gecerli_dizin,"yeni_dizin")
+os.mkdir(new_directory)
+print(f"{new_directory} olustu")
+os.chdir(new_directory)
+print(f"{new_directory} dizine girildi")
+dosya_yolu=os.path.join(new_directory,"example.txt")
+with open(dosya_yolu,'w',encoding='utf-8') as file:
+    file.write("hellö wörld")
+os.remove('example.txt')
+os.chdir(gecerli_dizin)
+os.rmdir('yeni_dizin')
+print("açtigim dizini sildim")
