@@ -1,0 +1,66 @@
+#1
+#10 elemanlı tamsayı listesine klavyeden değerler girilecek listede yer alan en büyük ilk iki sayıyı bularak ekrana yazdıran programı bulunuz.
+
+toplam=10
+sayılar=[]
+for i in range(toplam):
+    deger=int(input("sayı gir:"))
+    sayılar.append(deger)
+print(sayılar)
+sayılar.sort()
+print(sayılar)
+print(sayılar[-2:]) 
+
+#2
+#floyd üçgenini yazdırmak için python kodunu yazınız.
+
+def floyd(satir):
+    number=1
+    for i in range(1,satir+1):
+        for j in range(1,i+1):
+            print(number,end=" ")
+            number +=1
+        print()    
+satir=int(input("satir sayisini giriniz:"))
+floyd(satir)
+
+#3
+#verilen bir pozitif tam sayı için fibonacci dizisinin ilk n terimini hesaplayan bir python fonksiyonu yazınız.
+def fibonacci(n):
+    fibo=[0,1]
+    for i in range(2,n):
+        next=fibo[-1]+fibo[-2]
+        fibo.append(next)
+    return fibo
+n=22
+fibo=fibonacci(n)
+print(f"{fibo}")
+
+#4
+#eleman frekansı bulma
+
+liste=[1,1,1,1,1,1,1,1,1,0,0,0,0,0]
+def eleman_frekansı(liste):
+    frekans={}
+    for i in liste:
+        if i in frekans:
+            frekans[i]+=1
+        else:
+            frekans[i]=1
+    return frekans
+print(eleman_frekansı(liste))
+
+#5
+#verilen iki dize arsında ortak elemanları bulan bir python fonksiyonu yaznız.
+
+def ortakeleman(l1,l2):
+    ortak=list()
+    for x in l1:
+        if x in l2:
+            ortak.append(x)
+    return ortak
+l1=[5,777,22,17,69]
+l2=[22,17,777,99,78]
+print(ortakeleman(l1,l2)) 
+
+
