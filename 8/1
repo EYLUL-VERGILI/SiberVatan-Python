@@ -1,0 +1,70 @@
+def sayi_kontrol(sayi):
+    rakam_str = str(sayi)
+    if len(set(rakam_str)) == 1:
+        return 1
+    else:
+        return 0
+a=[11,53,99999999,56789,444,777]    
+for sayi in a:
+    if sayi_kontrol(sayi):
+        print(f"{sayi} :basamaklari ayni")
+    else:
+        print(f"{sayi}:basamaklari farkli")
+
+list = [10,20,30]
+print(type(list))
+
+class Person:
+    def __init__(self,name,lname,address,yil):
+        self.name = name
+        self.lname = lname
+        self.address = address
+        self.yil = yil
+    def intro(self):
+        print("merhaba ben "+ self.name)
+    def yas_hesaplama(self):
+        return 2024-self.yil
+
+p1 = Person(name="ali",lname="koç",address="karabük",yil=int("1976"))
+print(p1) 
+print(type(p1))
+print("benim adim:",p1.name,"soyadim:",p1.lname,"adres bilgisi:",p1.address,"dogum yili:",p1.yil,"yasim:",p1.yas_hesaplama())
+
+p2 = Person(name="eyl",lname="ver",address="merkez",yil=int("2008"))
+print(p2) 
+print("benim adim:",p2.name,"soyadim:",p2.lname,"address bilgisi:",p2.address,"dogum yili:",p2.yil,"yasim:",p2.yas_hesaplama())
+
+p2.intro()
+p1.intro()
+p1.yas_hesaplama()
+p2.yas_hesaplama()
+
+class Daire:
+    pi=3.14
+    def __init__(self,r):
+        self.r=r
+    def daire_cevresi(self):
+        return 2*self.pi*self.r
+p1 =Daire(5)
+p2 = Daire(15)
+print(p1.daire_cevresi())
+print(p2.daire_cevresi())
+
+class Daire :
+    pi=3.14
+    def __init__(self,r):
+        self.r=r
+    def daire_alani(self):
+        return self.pi*self.r*self.r
+p1 =Daire(5)
+p2 = Daire(15)
+print(p1.daire_alani())
+print(p2.daire_alani())
+
+class square:
+    def __init__(self,a):
+        self.a=a
+    def karenin_alani(self):
+        return self.a**2
+p1 =square(5)
+print(p1.karenin_alani())
