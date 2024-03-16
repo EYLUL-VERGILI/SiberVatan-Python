@@ -1,0 +1,116 @@
+a=90 
+b="sibervatan"
+
+num1,num2,num3=5,55,65
+sayilar=num1,num2,num3
+print("sayilar",num1,num2,num3)
+
+num1=num1+50
+num2=num2+55
+num3=num3+90
+
+num1/=num2
+
+numbers=(50,55,66)
+print(type(numbers))
+num1,num2,num3=numbers
+print(num2)
+
+a,b,c,d=50,100,50,75
+
+print(str(a < b))
+
+sonuc=(a>b)
+print(sonuc)
+
+sonuc=(a==c)
+print(sonuc)
+
+sonuc=(a>d)
+print(sonuc)
+
+sonuc=(a!=c)
+print(sonuc)
+
+username1="ceku"
+username2="arif"
+
+print("A.R.O.G. ' a hoş geldiniz.\n")
+username_input=input("bir kullanici adi giriniz:")
+
+sonuc1 = (username1.lower()==username_input.lower())
+print("eşleşme sonucu..:", sonuc1)
+
+sonuc2 = (username2.lower()==username_input.lower())
+print("eşleşme sonucu..:",sonuc2)
+
+sonuc3 = (sonuc1 != sonuc2)
+print("eşleşme sonucu..:",sonuc3)
+
+dict = {'ey@gmail.com':'sifre1', 'az@gmail.com':'sifre2'}
+input_sifre=input('şifre giriniz:')
+input_email=input('email giriniz:')
+sonuc_mail=(input_email in dict.keys())
+sonuc_sifre=(input_sifre in dict.values())
+sonuc_final=(int(sonuc_mail)+int(sonuc_sifre)==2)
+print("Eşleşme durumu..:", sonuc_final)
+
+fruits = ['elma','muz','portakal','kivi']
+print("kiraz" in fruits)
+
+x = y = [10,20,30]
+z = [10,20,30]
+print(x is y)
+print(x is z)
+print(x == z)
+
+vize_input = int(input("vize notunuzu giriniz"))
+final_input = int(input("final notunuzu giriniz"))
+ortalama = (int(vize_input*40/100) + int(final_input*60/100))
+print(ortalama>= 50)
+
+girilen_sayi = int(input("sayi giriniz"))
+result = (girilen_sayi > 0 ) and (girilen_sayi %2 == 0)
+print(str(result))
+
+x = 98
+y = 23
+if (x>y):
+    print("en buyuk sayi...", x)
+    #<eger kosul dogru(true) ise calisacak kodlar>
+elif (x==y):
+    print("sayilar esittir")    
+else:
+    print("en buyuksayi..:", y)
+    #<eger kosul yanlis(false) ise calisacak kodlar>
+ 
+ad = "eyl"
+sifre = 123
+if (ad=="eyl" and sifre==123):
+    print("giris basarilidir")
+elif(ad=="eyl" and sifre!=123):
+    print("sifre hatalidir")
+else:
+    (ad!="eyl" and sifre == 123)
+    print("ad hatalidir")
+
+print("-------------------*HOSGELDİNİZ*--------------------------")
+print("toplama icin 1")
+print("cikarma icin 2")
+print("carpma icin 3")
+print("bolme icin 4")
+tercih_input =int(input("-HANGİ İSLEMİ TERCİH EDERSİNİZ?:3"))
+sayi_input = int(input("ilk sayiyi giriniz:"))
+sayi_input2 = int(input("ikinci sayiyi giriniz:"))
+
+
+if tercih_input==1:
+    print(sayi_input+sayi_input2)
+elif tercih_input==2:
+    print(sayi_input - sayi_input2)
+elif tercih_input==3:
+    print(sayi_input * sayi_input2)
+else:
+    tercih_input==4
+    print(sayi_input/sayi_input2)
+min
