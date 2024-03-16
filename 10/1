@@ -1,0 +1,72 @@
+1
+def palindrom_kontrol():
+    kelime =input("bir kelime giriniz:")
+    ters_kelime = kelime[::-1]
+    if kelime == ters_kelime:
+        print("Bu kelime palindromedir")
+    else :
+        kelime!= ters_kelime
+        print("bu kelime polindrom değildir")
+palindrom_kontrol()
+
+2
+def palinrom_mu(metin):
+    temiz_metin=metin.upper()
+    return temiz_metin == temiz_metin[::-1]
+metin=input("metin giriniz:")
+if palinrom_mu(metin):
+    print("palindrom bir kelimedir")
+else:
+    print("palindrom degildir")
+
+1
+def ortak_eleman(liste1,liste2):
+    ortak=list()
+    for x in liste1:
+        if x in liste2:
+            ortak.append(x)
+    return ortak
+liste1=[1,2,3,4,5]
+liste2=[3,4,5,6,7,8]
+print(ortak_eleman(liste1,liste2))
+
+dict = {'anahtar1':'deger1','anahtar2':'deger2'}
+print(dict['anahtar1'])
+print(dict['deger1'])
+
+1
+l1=[1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0]
+def eleman_sıklıgı(l1):
+    sıklık={}
+    for x in l1:
+        if x in sıklık:
+            sıklık[x]+=1  
+        else:
+            sıklık[x]=1
+    return sıklık
+print(eleman_sıklıgı(l1)) 
+    
+
+2
+l1=[1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0]
+def eleman_sıklıgı(l1):
+    sıklık={}
+    for x in l1:
+        if x in sıklık:
+            sıklık[x]+=1  
+        else:
+            sıklık[x]=1
+    return sıklık
+sonuc = eleman_sıklıgı(l1)
+for eleman, sıklık in sonuc.items():
+    print(f"{eleman}:{sıklık}")
+
+def fibonacci(n):
+    fibo=[0,1]
+    for _ in range(2,n):
+        next = fibo[-1]+fibo[-2]
+        fibo.append(next)
+    return fibo
+n=1907
+fibo=fibonacci(n)
+print(f"{fibo}")
